@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <div id="app-root"></div>
+
+<script>
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    var urlParams = new URLSearchParams(window.location.search);
+
+    const params = getUrlVars();
+    
+    const NAME = urlParams.has('name') ? urlParams.get('name') : 'Adrien';
+    
+    const rootApp = document.getElementById('app-root');
+    document.write(NAME);
+    document.write(decodeURI(NAME));
+    
+    </script>
+</body>
+</html>
