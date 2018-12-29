@@ -1,0 +1,59 @@
+= : CORS, XSS, CSRF, SQL injection #BackToTheBasics
+Adrien Pessu (adrien@pessu.net)
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:navigation:
+:menu:
+:status:
+:title-slide-background-image: wallpapertitle.png
+:title-slide-transition: zoom
+:title-slide-transition-speed: fast
+:icons: font
+
+:revealjs_transition: fade
+
+[background-color="#01303a"]
+== CORS
+
+[NOTE.speaker]
+--
+Def
+--
+
+=== browser
+
+=== curl
+
+=== What's the point?
+
+[background-color="#01303a"]
+== XSS
+
+[NOTE.speaker]
+--
+Def
+--
+
+=== exemple simple
+
+=== exemple moins simple
+
+=== exemple reacts / angular / vue
+
+=== Attaque possible
+
+=== Moyens de se défendre
+
+Content Security Policy
+
+[background-color="#01303a"]
+== CSRF
+
+=== schema d'attaque
+
+[background-color="#01303a"]
+== SQL injection
+
+=== exemple

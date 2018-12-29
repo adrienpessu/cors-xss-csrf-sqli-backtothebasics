@@ -1,0 +1,6 @@
+image: gradle:4.5
+
+build:
+  script:
+   - ./gradlew build
+   - ./gradlew asciidoctor
