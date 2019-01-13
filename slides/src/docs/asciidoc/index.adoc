@@ -53,14 +53,13 @@ Def
 
 === En-têtes de requête
 
-[source, python]
+[source, html]
 ```
     Origin
-    Access-Control-Request-Method
+    Access-Control-Request-Methođ
     Access-Control-Request-Headers
 ```
 
-[source, python]
 === En-têtes de réponse
 
 ```
