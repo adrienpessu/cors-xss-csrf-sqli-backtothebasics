@@ -15,24 +15,91 @@ ifndef::sourcedir[:sourcedir: ../java]
 :revealjs_transition: fade
 
 [background-color="#01303a"]
-== CORS
+== Cross Origin Resource Sharing
+
+=== Avant
+
+image::CORS-1-before.svg[avant,600,600]
 
 [NOTE.speaker]
 --
+Avant requete sur le meme serveur
+--
+
+=== JSONP
+
+image::CORS-2-jsonp.svg[clientserveur, 600, 600]
+
+[NOTE.speaker]
+--
+JsonP (GET seulement)
+--
+
+=== CORS
+
+image::CORS-2-cors.svg[clientserveur,600,600]
+
+[NOTE.speaker]
+--
+Le navigateur VoiceXML en 2004 
+en 2006 ebauche du projet a la W3C
+Alternative a JsonP (GET seulement)
+
+supporté par tous les navigateurs depuis bien longtemps
+
 Def
 --
 
+
+=== En-têtes de requête
+
+[source, python]
+```
+    Origin
+    Access-Control-Request-Method
+    Access-Control-Request-Headers
+```
+
+[source, python]
+=== En-têtes de réponse
+
+```
+    Access-Control-Allow-Origin
+    Access-Control-Allow-Credentials
+    Access-Control-Expose-Headers
+    Access-Control-Max-Age
+    Access-Control-Allow-Methods
+    Access-Control-Allow-Headers
+```
+
 === browser
+[NOTE.speaker]
+--
+supporté par tous les navigateurs depuis bien longtemps
+--
+
+=== Pre flight
+
+image::CORS-3-CORSpre.png[clientserveur,600,600]
 
 === curl
 
+```
+    curl 'https://api.foo.dev/bar' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'cache-control: no-cache'
+```
+
 === What's the point?
+
+=== To go further
+
+Content Security Policy
 
 [background-color="#01303a"]
 == XSS
 
 [NOTE.speaker]
 --
+css deja
 Def
 --
 
@@ -51,9 +118,18 @@ Content Security Policy
 [background-color="#01303a"]
 == CSRF
 
+[%notitle]
 === schema d'attaque
+
+image::CSRF-1.png[clientserveur]
 
 [background-color="#01303a"]
 == SQL injection
 
-=== exemple
+=== Form
+
+=== <input/>
+
+```
+    ' drop database master; 
+```
