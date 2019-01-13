@@ -128,8 +128,10 @@ image::CSRF-1.png[clientserveur]
 
 === Form
 
+image::form.png[form,700,550]
+
 === <input/>
 
 ```
-    ' drop database master; 
+    '; delete from subscriber; '
 ```
