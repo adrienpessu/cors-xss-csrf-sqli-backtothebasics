@@ -81,17 +81,15 @@ supporté par tous les navigateurs depuis bien longtemps
 
 image::CORS-3-CORSpre.png[clientserveur,600,600]
 
-=== curl
+=== curl / CORS everywhere / Postman
 
 ```
-    curl 'https://api.foo.dev/bar' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'cache-control: no-cache'
+    curl 'https://api.foo.dev/bar' 
+    -H 'accept: application/json' 
+    -H 'Origin: http://front.foo.dev'
 ```
 
 === What's the point?
-
-=== To go further
-
-Content Security Policy
 
 [background-color="#01303a"]
 == XSS
@@ -103,8 +101,6 @@ Def
 --
 
 === exemple simple
-
-=== exemple moins simple
 
 === exemple reacts / angular / vue
 
@@ -132,5 +128,7 @@ image::form.png[form,700,550]
 === <input/>
 
 ```
-    '; delete from subscriber; '
+    '; delete from subscriber; 
 ```
+
+== Merci à vous

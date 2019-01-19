@@ -1,0 +1,54 @@
+== Intro
+
+Ce genre de questions fait partie des basics et devrait être une évidence pour tout le monde
+
+Je ne serai pas exhaustif, et c'est sûr, il y aura des manques.
+
+- CORS
+- XSS
+- CSRF
+- SQL injection
+
+== CORS
+
+=== 
+- avant -> meme server
+
+=== 
+- JsonP est insufisant parce que c'est que du GET
+
+=== Cross Origin Resource Sharing
+
+- Cors est dans le navigateur VoiceXML en 2004
+- puis en 2006, le projet est entré a la w3c
+
+- le principe est simple, on ajoute des entetes à la requete HTTP
+- ces entetes sont lu par le server
+- le server renvoi des informations à l'entete de la reponse
+
+C'est le server qui fait la fait la protection contre les CORS
+
+=== 
+
+Tous les navigeurs le supportent maintenant 
+
+
+=== preflight
+
+Requête de pré-vérification
+
+D'abord dans chrome, depuis sur firefox ????
+on envoi une requete avec la method OPTION juste pour récupérer les methodes authorizée
+
+=== curl
+
+on peut contourner en faisant une commande CURL
+
+=== pourquoi ?
+
+== XSS
+
+Cross site scripting 
+
+css est deja pris
+
