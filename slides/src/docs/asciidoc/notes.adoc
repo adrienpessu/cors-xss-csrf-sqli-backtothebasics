@@ -51,4 +51,14 @@ on peut contourner en faisant une commande CURL
 Cross site scripting 
 
 css est deja pris
+=== exemple simple
+=== exemple ReactJs
+- Library UI => Material UI
 
+== CSRF
+- Troll envoi un script dans un message / image d'un forum
+- L'admin execute ce script qui supprime un utilisateur
+
+- on ajout coté serveur un token à l'URL, mais ...
+
+== SQL Injection
