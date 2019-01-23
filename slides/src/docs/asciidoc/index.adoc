@@ -26,15 +26,6 @@ image::CORS-1-before.svg[avant,600,600]
 Avant requete sur le meme serveur
 --
 
-=== JSONP
-
-image::CORS-2-jsonp.svg[clientserveur, 600, 600]
-
-[NOTE.speaker]
---
-JsonP (GET seulement)
---
-
 === CORS
 
 image::CORS-2-cors.svg[clientserveur,600,600]
@@ -92,7 +83,7 @@ image::CORS-3-CORSpre.png[clientserveur,600,600]
 === What's the point?
 
 [background-color="#01303a"]
-== XSS
+== Cross Site Scripting
 
 [NOTE.speaker]
 --
@@ -111,7 +102,7 @@ Def
 Content Security Policy
 
 [background-color="#01303a"]
-== CSRF
+== Cross-Site Request Forgery
 
 [%notitle]
 === schema d'attaque
@@ -128,7 +119,29 @@ image::form.png[form,700,550]
 === <input/>
 
 ```
-    '; delete from subscriber; 
+    INSERT INTO subscriber VALUES (\'' + input.subscriber + '\'); 
+```
+
+=== <input/>
+
+```
+    a@a.a'); DELETE FROM subscriber; SELECT '1
+```
+
+=== <input/>
+
+```
+    INSERT INTO subscriber VALUES ('a@a.a'); delete from subscriber; select '1'); 
+```
+
+=== <input/>
+
+```
+    INSERT INTO subscriber VALUES ('a@a.a'); 
+    DELETE FROM subscriber; 
+    SELECT '1'); 
 ```
 
 == Merci à vous
+
+https://www.owasp.org/[https://www.owasp.org/]
