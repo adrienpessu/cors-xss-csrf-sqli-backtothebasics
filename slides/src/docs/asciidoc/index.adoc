@@ -125,13 +125,7 @@ image::form.png[form,700,550]
 === <input/>
 
 ```
-    a@a.a'); DELETE FROM subscriber; SELECT '1
-```
-
-=== <input/>
-
-```
-    INSERT INTO subscriber VALUES ('a@a.a'); delete from subscriber; select '1'); 
+    a@a.a'); DELETE FROM subscriber; SELECT ('1
 ```
 
 === <input/>
@@ -139,7 +133,7 @@ image::form.png[form,700,550]
 ```
     INSERT INTO subscriber VALUES ('a@a.a'); 
     DELETE FROM subscriber; 
-    SELECT '1'); 
+    SELECT ('1');
 ```
 
 == Merci à vous
