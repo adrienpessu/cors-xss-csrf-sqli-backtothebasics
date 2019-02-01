@@ -3,19 +3,19 @@
 <script src="reveal.js/css/theme/asciinema-player.js"></script>
 
 </head><body><div class="reveal"><div class="slides"><section class="title" data-state="title" data-transition="zoom" data-transition-speed="fast" data-background-image="./images/wallpapertitle.png"><h1></h1><h2>CORS, XSS, CSRF, SQL injection #BackToTheBasics</h2><p class="author"><small>Adrien Pessu (adrien@pessu.net)</small></p></section><section><section id="cross-origin-resource-sharing" data-background-color="#01303a"><h2>Cross Origin Resource Sharing</h2></section><section id="avant"><h2>Avant</h2><div class="imageblock" style=""><img src="./images/CORS-1-before.svg" alt="avant" width="600" height="600" /></div>
-<aside class="notes"><div class="paragraph"><p>Avant requete sur le meme serveur</p></div></aside></section><section id="cors"><h2>CORS</h2><div class="imageblock" style=""><img src="./images/CORS-2-cors.svg" alt="clientserveur" width="600" height="600" /></div>
+<aside class="notes"><div class="paragraph"><p>Avant requete sur le meme serveur</p></div></aside></section><section id="cors"><h2>CORS</h2><div class="imageblock" style=""><img src="./images/CORS-2-cors.svg" alt="clientserveur" width="750" height="600" /></div>
 <aside class="notes"><div class="paragraph"><p>Le navigateur VoiceXML en 2004
 en 2006 ebauche du projet a la W3C
 Alternative a JsonP (GET seulement)</p></div>
 <div class="paragraph"><p>supporté par tous les navigateurs depuis bien longtemps</p></div>
-<div class="paragraph"><p>Def</p></div></aside></section><section id="en-ttes-de-requte"><h2>En-têtes de requête</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin
+<div class="paragraph"><p>Def</p></div></aside></section><section id="cors-2"><h2>CORS</h2><div class="imageblock" style=""><img src="./images/CORS-2.1-cors.svg" alt="clientserveur" width="800" height="600" /></div></section><section id="pre-flight"><h2>Pre flight</h2><div class="imageblock" style=""><img src="./images/CORS-3-CORSpre.png" alt="clientserveur" width="600" height="600" /></div></section><section id="en-ttes-de-requte"><h2>En-têtes de requête</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin
     Access-Control-Request-Methođ
     Access-Control-Request-Headers</code></pre></div></div></section><section id="en-ttes-de-rponse"><h2>En-têtes de réponse</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Access-Control-Allow-Origin
     Access-Control-Allow-Credentials
     Access-Control-Expose-Headers
     Access-Control-Max-Age
     Access-Control-Allow-Methods
-    Access-Control-Allow-Headers</code></pre></div></div></section><section id="browser"><h2>browser</h2><aside class="notes"><div class="paragraph"><p>supporté par tous les navigateurs depuis bien longtemps</p></div></aside></section><section id="pre-flight"><h2>Pre flight</h2><div class="imageblock" style=""><img src="./images/CORS-3-CORSpre.png" alt="clientserveur" width="600" height="600" /></div></section><section id="curl-cors-everywhere-postman"><h2>curl / CORS everywhere / Postman</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    curl 'https://api.foo.dev/bar'
+    Access-Control-Allow-Headers</code></pre></div></div></section><section id="browser"><h2>browser</h2><aside class="notes"><div class="paragraph"><p>supporté par tous les navigateurs depuis bien longtemps</p></div></aside></section><section id="curl-cors-everywhere-postman"><h2>curl / CORS everywhere / Postman</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    curl 'https://api.foo.dev/bar'
     -H 'accept: application/json'
     -H 'Origin: http://front.foo.dev'</code></pre></div></div></section><section id="what-s-the-point"><h2>What&#8217;s the point?</h2></section></section>
 <section><section id="cross-site-scripting" data-background-color="#01303a"><h2>Cross Site Scripting</h2><aside class="notes"><div class="paragraph"><p>css deja

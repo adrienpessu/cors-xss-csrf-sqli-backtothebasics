@@ -28,7 +28,7 @@ Avant requete sur le meme serveur
 
 === CORS
 
-image::CORS-2-cors.svg[clientserveur,600,600]
+image::CORS-2-cors.svg[clientserveur,750,600]
 
 [NOTE.speaker]
 --
@@ -41,6 +41,13 @@ supporté par tous les navigateurs depuis bien longtemps
 Def
 --
 
+=== CORS
+
+image::CORS-2.1-cors.svg[clientserveur,800,600]
+
+=== Pre flight
+
+image::CORS-3-CORSpre.png[clientserveur,600,600]
 
 === En-têtes de requête
 
@@ -67,10 +74,6 @@ Def
 --
 supporté par tous les navigateurs depuis bien longtemps
 --
-
-=== Pre flight
-
-image::CORS-3-CORSpre.png[clientserveur,600,600]
 
 === curl / CORS everywhere / Postman
 
