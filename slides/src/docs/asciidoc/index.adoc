@@ -69,18 +69,68 @@ image::CORS-3-CORSpre.png[clientserveur,600,600]
     Access-Control-Allow-Headers
 ```
 
-=== browser
-[NOTE.speaker]
---
-supporté par tous les navigateurs depuis bien longtemps
---
+=== config
 
-=== curl / CORS everywhere / Postman
-
+[source, html]
 ```
-    curl 'https://api.foo.dev/bar' 
-    -H 'accept: application/json' 
-    -H 'Origin: http://front.foo.dev'
+    Origin: *
+
+
+
+
+    😨
+```
+
+=== Config
+
+[source, xml]
+```
+    Origin: *google.com
+
+
+
+
+    🤔
+```
+
+[transition=zoom]
+=== Config
+
+[source, xml]
+```
+    Origin: *google.com
+
+
+
+    Origin: notgoogle.com
+    😨
+```
+
+=== Config
+
+[source, xml]
+```
+    Origin: google.com*
+
+
+
+
+
+    🤔
+```
+
+[transition=zoom]
+=== Config
+
+[source, xml]
+```
+    Origin: google.com*
+
+
+
+
+    Origin: google.com.evil.com
+    😨
 ```
 
 === What's the point?

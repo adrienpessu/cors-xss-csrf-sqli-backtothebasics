@@ -15,9 +15,34 @@ Alternative a JsonP (GET seulement)</p></div>
     Access-Control-Expose-Headers
     Access-Control-Max-Age
     Access-Control-Allow-Methods
-    Access-Control-Allow-Headers</code></pre></div></div></section><section id="browser"><h2>browser</h2><aside class="notes"><div class="paragraph"><p>supporté par tous les navigateurs depuis bien longtemps</p></div></aside></section><section id="curl-cors-everywhere-postman"><h2>curl / CORS everywhere / Postman</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    curl 'https://api.foo.dev/bar'
-    -H 'accept: application/json'
-    -H 'Origin: http://front.foo.dev'</code></pre></div></div></section><section id="what-s-the-point"><h2>What&#8217;s the point?</h2></section></section>
+    Access-Control-Allow-Headers</code></pre></div></div></section><section id="config"><h2>config</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin: *
+
+
+
+
+    😨</code></pre></div></div></section><section id="config-2"><h2>Config</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin: *google.com
+
+
+
+
+    🤔</code></pre></div></div></section><section id="config-3" data-transition="zoom"><h2>Config</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin: *google.com
+
+
+
+    Origin: notgoogle.com
+    😨</code></pre></div></div></section><section id="config-4"><h2>Config</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin: google.com*
+
+
+
+
+
+    🤔</code></pre></div></div></section><section id="config-5" data-transition="zoom"><h2>Config</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>    Origin: google.com*
+
+
+
+
+    Origin: google.com.evil.com
+    😨</code></pre></div></div></section><section id="what-s-the-point"><h2>What&#8217;s the point?</h2></section></section>
 <section><section id="cross-site-scripting" data-background-color="#01303a"><h2>Cross Site Scripting</h2><aside class="notes"><div class="paragraph"><p>css deja
 Def</p></div></aside></section><section id="exemple-simple"><h2>exemple simple</h2></section><section id="exemple-reacts-angular-vue"><h2>exemple reacts / angular / vue</h2></section><section id="attaque-possible"><h2>Attaque possible</h2></section><section id="moyens-de-se-dfendre"><h2>Moyens de se défendre</h2><div class="paragraph"><p>Content Security Policy</p></div></section></section>
 <section><section id="cross-site-request-forgery" data-background-color="#01303a"><h2>Cross-Site Request Forgery</h2></section><section id="schema-d-attaque"><div class="imageblock" style=""><img src="./images/CSRF-1.png" alt="clientserveur" width="1280" height="720" /></div></section></section>

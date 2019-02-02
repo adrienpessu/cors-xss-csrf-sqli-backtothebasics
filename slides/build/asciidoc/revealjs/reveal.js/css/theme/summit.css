@@ -347,3 +347,7 @@ body {
   font-family: 'FontAwesome';
   font-style: normal;
 }
+
+span.hljs-selector-class{
+  color: #000000;
+}
