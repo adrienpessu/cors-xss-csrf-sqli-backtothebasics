@@ -57,3 +57,6 @@ typings/
 .env
 
 .DS_Store
+
+build
+.gradle
